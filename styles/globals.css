@@ -551,9 +551,169 @@ input[type='range'] {
 span {
     font-size: 20px;
 }
+.speedometer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transform: translate(14%,-13%);
+  }
+  
+  .circle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    transform: translate(0%,10%);
+  }
+  
+  .circle {
+    position: relative;
+    width: 18vw;
+    height: 18vw;
+    max-width: 240px;
+    max-height: 240px;
+    transform: translate(0%,12%);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .arc {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+  }
+  
+  .circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Urbanist';
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+  }
+  
+  .circle-text .number {
+    font-size: 2vw;
+    max-font-size: 40px;
+  }
+  
+  .circle-text .unit {
+    font-size: 1.25vw;
+    max-font-size: 25px;
+  }
+  
+  .car-container {
+    position: relative;
+    width: 25vw;
+    height: 25vw;
+    max-width: 310px;
+    max-height: 244.6px;
+  }
+  
+  .gear-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 8px;
+    top: -50px;
+    left: 5px;
+  }
+  
+  .gear-button {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    letter-spacing: -1px;
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  .gear-selector-line {
+    position: absolute;
+    bottom: -10px;
+    left: calc(45% - 84.65px);
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(to right, #6EBFF4 22.4%, #00BCF7 59%, #00CBF8 85%);
+    z-index: 1;
+  }
+  
+  .gear-arrow {
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .gear-arrow-left {
+    background-image: url('/images/Union (1).svg');
+    margin-right: 8px;
+  }
+  
+  .gear-arrow-right {
+    background-image: url('/images/Union (2).svg');
+    margin-left: 8px;
+  }
+  
+  .svg-composition {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .group-svg {
+    position: absolute;
+    top: -20%;
+    left: -40%;
+    width: 8%;
+    height: auto;
+    z-index: 2;
+  }
+  
+  .headlight-svg {
+    position: absolute;
+    top: -22%;
+    left: -25%;
+    width: 10%;
+    height: auto;
+    z-index: 2;
+  }
+  
+  .blue-path, .white-glow, .car-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+  
+  .car-image {
+    top: 35%;
+    left: 40%;
+    width: 20%;
+    height: auto;
+    z-index: 3;
+  }
+  
 
+    
 
   
+
   
   
   
